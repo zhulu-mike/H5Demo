@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="elibs" type="Haxe">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/elibs" />
+    </SOURCES>
+  </library>
+</component>

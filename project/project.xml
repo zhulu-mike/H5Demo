@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project>
+	
+	<meta title="demo" package="::packageName::" version="::version::" company="::company::" />
+	<app main="Main" path="bin" file="::file::"  preloader="" />
+    <app preloader="MyPreLoader" if="html5"/>
+    <!--<app url="bin/html5/bin/index.html" if="html5"/>-->
+    <window width="800" height="480" background="#000000"/>
+	
+	<source path="src" />
+	<source path="elibs" />
+	
+	<haxelib name="openfl" />
+    <haxelib name="haxeui"/>
+    <haxelib name="bitmapFont" />
+	
+	<assets path="embed" rename="embed" exclude="" />
+    <assets path="assets"/>
+
+    <set name="RENDER_BLIT" if="flash || html5" unless="RENDER_TILE" />
+    <set name="RENDER_TILE" unless="RENDER_BLIT" />
+
+    <haxedef name="RENDER_BLIT" if="RENDER_BLIT" />
+    <haxedef name="RENDER_TILE" if="RENDER_TILE" />
+
+	<icon path="assets/logo.png" />
+	
+</project>
